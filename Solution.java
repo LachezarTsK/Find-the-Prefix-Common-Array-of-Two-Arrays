@@ -12,7 +12,7 @@ public class Solution {
             bitStampOccurenceOfElementsInFirstInput ^= 1L << firstInput[i];
             bitStampOccurenceOfElementsInSecondInput ^= 1L << secondInput[i];
 
-            long overlaps = (bitStampOccurenceOfElementsInFirstInput & bitStampOccurenceOfElementsInSecondInput);
+            long overlaps = bitStampOccurenceOfElementsInFirstInput & bitStampOccurenceOfElementsInSecondInput;
             prefixCommonArray[i] = countNumberOfBitsSetToOne(overlaps);
         }
         return prefixCommonArray;
